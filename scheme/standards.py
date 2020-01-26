@@ -1,7 +1,7 @@
 """Standard funcs for `scheme2python`."""
 
 
-from base import add1, car, cdr, cons, is_atom, is_null, is_zero, sub1, quote
+from primitives import add1, car, cdr, cons, is_atom, is_null, is_zero, sub1, quote
 
 
 def length(lat):
