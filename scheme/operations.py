@@ -1,7 +1,7 @@
 """Operation functions for `scheme2python`."""
 
 
-from base import add1, sub1, is_zero
+from primitives import add1, sub1, is_zero
 
 
 def add(n, m):
@@ -10,7 +10,7 @@ def add(n, m):
         return n
 
     else:
-        return (add1(add(n, sub1(m))))
+        return add1(add(n, sub1(m)))
 
 
 def sub(n, m):
@@ -19,7 +19,7 @@ def sub(n, m):
         return n
 
     else:
-        return (sub1(sub(n, sub1(m))))
+        return sub1(sub(n, sub1(m)))
 
 
 def gt(n, m):
@@ -52,7 +52,7 @@ def multiply(n, m):
         return 0
 
     else:
-        return (add(n, (multiply(n, sub1(m)))))
+        return add(n, (multiply(n, sub1(m))))
 
 
 def expon(n, m):
@@ -75,6 +75,11 @@ def floor(n, m):
 
 def eq_num(n, m):
     """Recursive function to check if `n` is equal to `m`."""
-    if gt(n, m): return False
-    elif lt(n, m): return False
-    else: return True
+    if gt(n, m):
+        return False
+
+    elif lt(n, m):
+        return False
+
+    else:
+        return True

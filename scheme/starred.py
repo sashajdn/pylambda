@@ -1,7 +1,7 @@
 """Starred (*) functions."""
 
 
-from base import add1, is_eq, is_null, is_atom, car, cdr, cons, quote
+from primitives import add1, is_eq, is_null, is_atom, car, cdr, cons, quote
 from operations import add
 
 

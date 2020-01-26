@@ -1,7 +1,7 @@
 """Parsing funcs for `scheme2python`."""
 
 
-from base import car, cdr, cons, is_atom, is_number, is_null, quote
+from primitives import car, cdr, cons, is_atom, is_number, is_null, quote
 
 
 def no_nums(l):

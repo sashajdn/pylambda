@@ -1,7 +1,7 @@
 """Numbers."""
 
 
-from operations import add, sub, multiply, floor, eq_num
+from primitives import add, sub, multiply, floor, eq_num
 
 
 def is_even(n):
