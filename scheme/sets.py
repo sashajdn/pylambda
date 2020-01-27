@@ -67,9 +67,6 @@ def rember_starred(a, l):
     )
 
 
-
-
-
 def is_set(lat):
     """Checks if `lat` is a set,  returns True if so, else False."""
     if is_null(lat):
@@ -118,6 +115,6 @@ def union(set1, set2):
         return set2
 
     if is_member(car(set1), set2):
-        return intersect(cdr(set1))
+        return union(cdr(set1))
 
-    return cons(car(set1), intersect(cdr(set1), set2))
+    return cons(car(set1), union(cdr(set1), set2))
