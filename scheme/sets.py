@@ -33,7 +33,7 @@ def is_member_starred(a, l):
 
         return is_member_starred(a, cdr(l))
 
-    _or(is_member(a, car(l)), is_member(a, car(l)))
+    _or(is_member(a, car(l)), is_member(a, cdr(l)))
 
 
 def rember(a, lat):
@@ -86,7 +86,7 @@ def make_set(lat):
     if is_member(car(lat), cdr(lat)):
         return make_set(cdr(lat))
 
-    return cons(car(lat), make_set(lat))
+    return cons(car(lat), make_set(cdr(lat)))
 
 
 def is_intersect(set1, set2):
