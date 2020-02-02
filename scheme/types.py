@@ -34,7 +34,7 @@ def initial_table(name):
 ### --- *lambda utils --- ###
 def table_of(exp):
     """Gets the table from t_lambda eval."""
-    return car(cdr(first))
+    return car(cdr(exp))
 
 
 def formals_of(exp):
