@@ -212,7 +212,7 @@ def t_lambda(exp, table):
     return build(quote("non-primitive"),
                  cons(table, cdr(exp)))
 
-
+  
 def t_cond(exp, table):
     """`t_cond` type function: `*cond in scheme`.
 
