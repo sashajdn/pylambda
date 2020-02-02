@@ -19,18 +19,8 @@ def _or(a, b):
 
 def _land(a, b):
     """Lazy implementation of `_and`."""
-    a = a()
-    b = b()
-    if a:
-        return b
-
-    return False
+    return _and(a(), b())
 
 def _lor(a, b):
     """Lazy implementation of `_or`."""
-    a = a()
-    b = b()
-    if a:
-        return b
-
-    return False
+    return _or(a(), b())

@@ -62,9 +62,15 @@ def is_eq(a1, a2):
     return a1 == a2
 
 
-def quote():
-    """Returns an empty list."""
-    return []
+def quote(_str=None):
+    """Returns an empty list, or casted str of `_str` if param passed.
+
+    NOTE: This is nothing more than synatic sugar to resemble schemes notation
+    """
+    if _str is None:
+        return []
+
+    return str(_str)
 
 
 def cons(a1, a2):
