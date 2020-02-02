@@ -4,6 +4,11 @@
 from primitives import add1, car, cdr, cons, is_atom, is_null, is_zero, sub1, quote
 
 
+### Lambda calc length: Note, python must have func defined so not quite (but closer)
+## Use with the Y-combinator.
+_LENGTH = lambda length: lambda l: 0 if is_null(l) else add1(length(cdr(l)))
+
+
 def length(lat):
     """Returns the length of the lateral list `l`."""
     if is_null(lat):
