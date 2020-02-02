@@ -5,16 +5,19 @@
 """
 
 
+from pairs import build
 from primitives import car, cdr, cons, is_null, is_eq
 
 
-def first(pair):
-    """Returns the first value of `pair`."""
-    return car(pair)
+### --- utils --- ###
+def new_entry(names, vals):
+    """Builds a new entry from a set of `names` and list of `values`."""
+    return build(names, vals)
 
-def second(pair):
-    """Returns the second value of `pair`."""
-    return car(cdr(pair))
+
+def extend_table(entry, table):
+    """Extends the `table` with `entry`."""
+    return cons(table, entry)
 
 
 ### --- `ENTRIES` --- ###

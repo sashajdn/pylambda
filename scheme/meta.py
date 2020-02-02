@@ -8,9 +8,9 @@ def atom_to_action(exp):
     """Converts an `exp` into an action, assuming `exp` is an `atom`."""
     if is_number(exp):
         return t_const
-    if is_eq(exp, quote("True"):
+    if is_eq(exp, quote("#t"):
         return True
-    if is_eq(exp, quote("False"):
+    if is_eq(exp, quote("#f"):
         return False
     if is_eq(exp, quote("cons")):
         return t_const
@@ -18,19 +18,19 @@ def atom_to_action(exp):
         return t_const
     if is_eq(exp, quote("cdr")):
         return t_const
-    if is_eq(exp, quote("is_null")):
+    if is_eq(exp, quote("null?")):
         return t_const
-    if is_eq(exp, quote("is_eq")):
+    if is_eq(exp, quote("eq?")):
         return t_const
-    if is_eq(exp, quote("is_atom")):
+    if is_eq(exp, quote("atom?")):
         return t_const
-    if is_eq(exp, quote("is_zero")):
+    if is_eq(exp, quote("zero?")):
         return t_const
     if is_eq(exp, quote("add1")):
         return t_const
     if is_eq(exp, quote("sub1")):
         return t_const
-    if is_eq(exp, quote("is_number")):
+    if is_eq(exp, quote("number?")):
         return t_const
 
     return t_identifier
