@@ -1,4 +1,4 @@
-"""Combinators as defined by `R. Sullyman` with bird metaphors."""
+"""Combinators as defined by `R. Smullyan` with bird metaphors."""
 
 
 ## -- IDIOT -- ##
